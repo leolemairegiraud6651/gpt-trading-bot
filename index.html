@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#101014">
+<title>GPT Trading Bot</title>
+<style>
+*{box-sizing:border-box}
+body{
+ background:#101014;
+ color:white;
+ font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+ margin:0;
+ padding:20px;
+}
+main{max-width:600px;margin:auto}
+h1{font-size:25px}
+h2{font-size:18px}
+.card{
+ background:#202026;
+ border-radius:20px;
+ padding:20px;
+ margin:15px 0;
+}
+.hero{
+ background:linear-gradient(135deg,#ff8a35,#c72d45);
+ border-radius:24px;
+ padding:25px;
+}
+.balance{
+ font-size:44px;
+ font-weight:bold;
+ margin:15px 0;
+}
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+.small{color:#aaa;font-size:13px}
+.green{color:#32dc98}
+.red{color:#ff6879}
+.amount{font-size:24px;font-weight:bold}
+.line{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:15px 0;
+ border-bottom:1px solid #38383e;
+}
+button{
+ width:100%;
+ border:0;
+ border-radius:15px;
+ padding:16px;
+ background:#26c98b;
+ color:#101014;
+ font-size:16px;
+ font-weight:bold;
+ margin-top:12px;
+}
+.track{
+ background:#38383e;
+ height:12px;
+ border-radius:10px;
+ overflow:hidden;
+}
+#progress{
+ background:#32dc98;
+ height:100%;
+ width:0;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>🤖 GPT TRADING BOT</h1>
+<p class="green">● SIMULATION UNIQUEMENT</p>
+
+<div class="hero">
+Valeur du portefeuille
+<div class="balance" id="balance">-- €</div>
+<div id="profit">Chargement...</div>
+<p>Capital initial : 100 €</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="small">Disponible</div>
+<div class="amount" id="cash">-- €</div>
+</div>
+<div class="card">
+<div class="small">Positions</div>
+<div class="amount" id="count">-- / 3</div>
+</div>
+</div>
+
+<div class="card">
+<h2>Objectif : 200 €</h2>
+<div class="track">
+<div id="progress"></div>
+</div>
+<p id="percent">--</p>
+</div>
+
+<div class="card">
+<h2>Cryptos détenues</h2>
+<div id="positions">Chargement...</div>
+</div>
+
+<div class="card">
+<h2>Historique des transactions</h2>
+<div id="history"></div>
+</div>
+
+<div class="card">
+<h2>Configuration du robot</h2>
+<p>10 cryptos surveillées</p>
+<p>Stratégie : suivi de tendance</p>
+<p>Analyse : toutes les heures</p>
+<p>Stop-loss : 3 %</p>
+<p>Take-profit : 6 %</p>
+<p>Argent réel engagé : 0 €</p>
+</div>
+
+<button onclick="load()">Actualiser le portefeuille</button>
+<p class="small" id="status"></p>
+
+</main>
+<script>
+const names={
+ XBTEUR:"Bitcoin",
+ ETHEUR:"Ethereum",
+ SOLEUR:"Solana",
+ XRPEUR:"XRP",
+ ADAEUR:"Cardano",
+ LINKEUR:"Chainlink",
+ DOTEUR:"Polkadot",
+ AVAXEUR:"Avalanche",
+ DOGEEUR:"Dogecoin",
+ SUIEUR:"Sui"
+};
+
+const el=id=>document.getElementById(id);
+const euro=n=>Number(n).toLocaleString("fr-FR",{
+ style:"currency",currency:"EUR"
+});
+
+function addLine(parent,left,right){
+ const row=document.createElement("div");
+ row.className="line";
+ const a=document.createElement("span");
+ const b=document.createElement("span");
+ a.textContent=left;
+ b.textContent=right;
+ row.append(a,b);
+ parent.append(row);
+}
+
+async function load(){
+ try{
+ const response=await fetch(
+ "portfolio.json?t="+Date.now(),
+ {cache:"no-store"}
+ );
+ if(!response.ok)throw new Error("Données indisponibles");
+ const d=await response.json();
+
+ el("balance").textContent=euro(d.estimated_value);
+ el("cash").textContent=euro(d.cash);
+ el("profit").textContent=
+ (d.profit>=0?"+":"")+euro(d.profit)+
+ " ("+Number(d.profit).toFixed(2)+" %)";
+ el("count").textContent=
+ Object.keys(d.positions).length+" / 3";
+
+ const pct=d.estimated_value/200*100;
+ el("progress").style.width=
+ Math.max(0,Math.min(100,pct))+"%";
+ el("percent").textContent=
+ pct.toFixed(2)+" % de l'objectif";
+
+ el("positions").replaceChildren();
+ for(const [coin,p] of Object.entries(d.positions)){
+ addLine(el("positions"),
+ names[coin]||coin,
+ Number(p.quantity).toFixed(8));
+ addLine(el("positions"),
+ "Prix d'achat",euro(p.entry));
+ }
+
+ el("history").replaceChildren();
+ for(const t of [...d.history].reverse()){
+ addLine(el("history"),
+ t.action+" "+(names[t.crypto]||t.crypto),
+ euro(t.price));
+ addLine(el("history"),
+ new Date(t.date).toLocaleString("fr-FR"),"");
+ }
+
+ el("status").textContent=
+ "Dernière analyse : "+
+ new Date(d.updated).toLocaleString("fr-FR");
+
+ }catch(e){
+ el("status").textContent=
+ "Impossible de récupérer le portefeuille.";
+ }
+}
+load();
+setInterval(load,60000);
+</script>
+</body>
+</html>
