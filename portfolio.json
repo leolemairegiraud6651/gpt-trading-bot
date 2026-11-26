@@ -1,19 +1,6 @@
 {
-  "cash": 39.94340879578118,
-  "positions": {
-    "DOTEUR": {
-      "entry": 0.6155,
-      "quantity": 32.36393176279448
-    },
-    "ETHEUR": {
-      "entry": 1548.65,
-      "quantity": 0.012862816001033159
-    },
-    "LINKEUR": {
-      "entry": 8.40544,
-      "quantity": 2.369893783073819
-    }
-  },
+  "cash": 98.48644056323613,
+  "positions": {},
   "history": [
     {
       "date": "2026-11-25T20:19:26.553360+00:00",
@@ -68,9 +55,27 @@
       "action": "ACHAT",
       "crypto": "LINKEUR",
       "price": 8.40544
+    },
+    {
+      "date": "2026-11-26T15:16:05.731675+00:00",
+      "action": "VENTE",
+      "crypto": "ETHEUR",
+      "price": 1527.47
+    },
+    {
+      "date": "2026-11-26T15:16:06.804105+00:00",
+      "action": "VENTE",
+      "crypto": "LINKEUR",
+      "price": 8.28499
+    },
+    {
+      "date": "2026-11-26T15:16:06.972660+00:00",
+      "action": "VENTE",
+      "crypto": "DOTEUR",
+      "price": 0.6024
     }
   ],
-  "estimated_value": 99.67,
-  "profit": -0.33,
-  "updated": "2026-11-26T13:36:04.881835+00:00"
+  "estimated_value": 98.49,
+  "profit": -1.51,
+  "updated": "2026-11-26T15:16:07.593396+00:00"
 }
