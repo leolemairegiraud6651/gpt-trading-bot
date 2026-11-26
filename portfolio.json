@@ -1,6 +1,11 @@
 {
-  "cash": 99.94340879578118,
-  "positions": {},
+  "cash": 79.94340879578118,
+  "positions": {
+    "DOTEUR": {
+      "entry": 0.6155,
+      "quantity": 32.36393176279448
+    }
+  },
   "history": [
     {
       "date": "2026-11-25T20:19:26.553360+00:00",
@@ -37,9 +42,15 @@
       "action": "VENTE",
       "crypto": "SOLEUR",
       "price": 64.62
+    },
+    {
+      "date": "2026-11-26T09:22:19.440331+00:00",
+      "action": "ACHAT",
+      "crypto": "DOTEUR",
+      "price": 0.6155
     }
   ],
-  "estimated_value": 99.94,
-  "profit": -0.06,
-  "updated": "2026-11-26T07:35:48.588579+00:00"
+  "estimated_value": 99.86,
+  "profit": -0.14,
+  "updated": "2026-11-26T09:22:19.795950+00:00"
 }
