@@ -1,6 +1,19 @@
 {
-  "cash": 98.48644056323613,
-  "positions": {},
+  "cash": 38.48644056323613,
+  "positions": {
+    "SOLEUR": {
+      "entry": 64.73,
+      "quantity": 0.30773984242236985
+    },
+    "XRPEUR": {
+      "entry": 0.86617,
+      "quantity": 22.997794890148587
+    },
+    "ADAEUR": {
+      "entry": 0.135838,
+      "quantity": 146.64526862880788
+    }
+  },
   "history": [
     {
       "date": "2026-11-25T20:19:26.553360+00:00",
@@ -73,9 +86,27 @@
       "action": "VENTE",
       "crypto": "DOTEUR",
       "price": 0.6024
+    },
+    {
+      "date": "2026-11-26T18:01:46.604216+00:00",
+      "action": "ACHAT",
+      "crypto": "SOLEUR",
+      "price": 64.73
+    },
+    {
+      "date": "2026-11-26T18:01:46.751743+00:00",
+      "action": "ACHAT",
+      "crypto": "XRPEUR",
+      "price": 0.86617
+    },
+    {
+      "date": "2026-11-26T18:01:46.895148+00:00",
+      "action": "ACHAT",
+      "crypto": "ADAEUR",
+      "price": 0.135838
     }
   ],
-  "estimated_value": 98.49,
-  "profit": -1.51,
-  "updated": "2026-11-26T16:24:20.532815+00:00"
+  "estimated_value": 98.25,
+  "profit": -1.75,
+  "updated": "2026-11-26T18:01:47.662215+00:00"
 }
