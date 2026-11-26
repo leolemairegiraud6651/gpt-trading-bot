@@ -1,19 +1,6 @@
 {
-  "cash": 40.0,
-  "positions": {
-    "XBTEUR": {
-      "entry": 54613.8,
-      "quantity": 0.0003647429770497567
-    },
-    "ETHEUR": {
-      "entry": 1533.56,
-      "quantity": 0.012989384177991082
-    },
-    "SOLEUR": {
-      "entry": 64.15,
-      "quantity": 0.31052221356196413
-    }
-  },
+  "cash": 99.94340879578118,
+  "positions": {},
   "history": [
     {
       "date": "2026-11-25T20:19:26.553360+00:00",
@@ -32,9 +19,27 @@
       "action": "ACHAT",
       "crypto": "SOLEUR",
       "price": 64.15
+    },
+    {
+      "date": "2026-11-26T07:35:46.642078+00:00",
+      "action": "VENTE",
+      "crypto": "XBTEUR",
+      "price": 55156.8
+    },
+    {
+      "date": "2026-11-26T07:35:46.861695+00:00",
+      "action": "VENTE",
+      "crypto": "ETHEUR",
+      "price": 1539.73
+    },
+    {
+      "date": "2026-11-26T07:35:47.069368+00:00",
+      "action": "VENTE",
+      "crypto": "SOLEUR",
+      "price": 64.62
     }
   ],
-  "estimated_value": 100.5,
-  "profit": 0.5,
-  "updated": "2026-11-26T05:29:05.632365+00:00"
+  "estimated_value": 99.94,
+  "profit": -0.06,
+  "updated": "2026-11-26T07:35:48.588579+00:00"
 }
