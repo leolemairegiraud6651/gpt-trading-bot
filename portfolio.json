@@ -1,5 +1,5 @@
 {
-  "cash": 56.04009589166513,
+  "cash": 36.04009589166513,
   "positions": {
     "AVAXEUR": {
       "entry": 6.077,
@@ -8,6 +8,10 @@
     "SUIEUR": {
       "entry": 0.6157,
       "quantity": 32.353418872827675
+    },
+    "XRPEUR": {
+      "entry": 0.86787,
+      "quantity": 22.95274637906599
     }
   },
   "history": [
@@ -214,9 +218,15 @@
       "action": "ACHAT",
       "crypto": "SUIEUR",
       "price": 0.6157
+    },
+    {
+      "date": "2026-11-27T21:08:08.997795+00:00",
+      "action": "ACHAT",
+      "crypto": "XRPEUR",
+      "price": 0.86787
     }
   ],
-  "estimated_value": 95.88,
-  "profit": -4.12,
-  "updated": "2026-11-27T20:10:04.172525+00:00"
+  "estimated_value": 95.78,
+  "profit": -4.22,
+  "updated": "2026-11-27T21:08:10.067345+00:00"
 }
