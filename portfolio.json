@@ -1,6 +1,15 @@
 {
-  "cash": 96.04009589166513,
-  "positions": {},
+  "cash": 56.04009589166513,
+  "positions": {
+    "AVAXEUR": {
+      "entry": 6.077,
+      "quantity": 3.277933190719105
+    },
+    "SUIEUR": {
+      "entry": 0.6157,
+      "quantity": 32.353418872827675
+    }
+  },
   "history": [
     {
       "date": "2026-11-25T20:19:26.553360+00:00",
@@ -193,9 +202,21 @@
       "action": "VENTE",
       "crypto": "DOGEEUR",
       "price": 0.0517385
+    },
+    {
+      "date": "2026-11-27T20:10:03.880467+00:00",
+      "action": "ACHAT",
+      "crypto": "AVAXEUR",
+      "price": 6.077
+    },
+    {
+      "date": "2026-11-27T20:10:04.172488+00:00",
+      "action": "ACHAT",
+      "crypto": "SUIEUR",
+      "price": 0.6157
     }
   ],
-  "estimated_value": 96.04,
-  "profit": -3.96,
-  "updated": "2026-11-27T19:11:32.133807+00:00"
+  "estimated_value": 95.88,
+  "profit": -4.12,
+  "updated": "2026-11-27T20:10:04.172525+00:00"
 }
