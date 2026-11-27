@@ -1,17 +1,17 @@
 {
-  "cash": 37.508665668830226,
+  "cash": 37.80475440232614,
   "positions": {
     "XBTEUR": {
       "entry": 55385.2,
       "quantity": 0.0003596628702252588
     },
-    "LINKEUR": {
-      "entry": 8.53349,
-      "quantity": 2.33433214312081
-    },
     "AVAXEUR": {
       "entry": 6.179,
       "quantity": 3.22382262502023
+    },
+    "DOGEEUR": {
+      "entry": 0.0533864,
+      "quantity": 373.12873690677776
     }
   },
   "history": [
@@ -164,9 +164,21 @@
       "action": "ACHAT",
       "crypto": "AVAXEUR",
       "price": 6.179
+    },
+    {
+      "date": "2026-11-27T11:04:08.786671+00:00",
+      "action": "VENTE",
+      "crypto": "LINKEUR",
+      "price": 8.72952
+    },
+    {
+      "date": "2026-11-27T11:04:09.068809+00:00",
+      "action": "ACHAT",
+      "crypto": "DOGEEUR",
+      "price": 0.0533864
     }
   ],
-  "estimated_value": 98.07,
-  "profit": -1.93,
-  "updated": "2026-11-27T09:22:47.432858+00:00"
+  "estimated_value": 97.92,
+  "profit": -2.08,
+  "updated": "2026-11-27T11:04:09.186418+00:00"
 }
