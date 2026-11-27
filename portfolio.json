@@ -1,5 +1,5 @@
 {
-  "cash": 37.9255281431811,
+  "cash": 57.65259181674988,
   "positions": {
     "AVAXEUR": {
       "entry": 6.179,
@@ -8,10 +8,6 @@
     "DOGEEUR": {
       "entry": 0.0533864,
       "quantity": 373.12873690677776
-    },
-    "ADAEUR": {
-      "entry": 0.139619,
-      "quantity": 142.67399136220718
     }
   },
   "history": [
@@ -188,9 +184,15 @@
       "action": "ACHAT",
       "crypto": "ADAEUR",
       "price": 0.139619
+    },
+    {
+      "date": "2026-11-27T13:29:02.800588+00:00",
+      "action": "VENTE",
+      "crypto": "ADAEUR",
+      "price": 0.138822
     }
   ],
-  "estimated_value": 97.82,
-  "profit": -2.18,
-  "updated": "2026-11-27T12:08:05.529413+00:00"
+  "estimated_value": 97.54,
+  "profit": -2.46,
+  "updated": "2026-11-27T13:29:03.769987+00:00"
 }
