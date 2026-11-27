@@ -1,5 +1,5 @@
 {
-  "cash": 37.511264447308164,
+  "cash": 37.508665668830226,
   "positions": {
     "XBTEUR": {
       "entry": 55385.2,
@@ -9,9 +9,9 @@
       "entry": 8.53349,
       "quantity": 2.33433214312081
     },
-    "DOTEUR": {
-      "entry": 0.6189,
-      "quantity": 32.18613669413476
+    "AVAXEUR": {
+      "entry": 6.179,
+      "quantity": 3.22382262502023
     }
   },
   "history": [
@@ -152,9 +152,21 @@
       "action": "ACHAT",
       "crypto": "DOTEUR",
       "price": 0.6189
+    },
+    {
+      "date": "2026-11-27T09:22:47.049329+00:00",
+      "action": "VENTE",
+      "crypto": "DOTEUR",
+      "price": 0.6238
+    },
+    {
+      "date": "2026-11-27T09:22:47.159350+00:00",
+      "action": "ACHAT",
+      "crypto": "AVAXEUR",
+      "price": 6.179
     }
   ],
-  "estimated_value": 98.15,
-  "profit": -1.85,
-  "updated": "2026-11-27T07:36:57.590835+00:00"
+  "estimated_value": 98.07,
+  "profit": -1.93,
+  "updated": "2026-11-27T09:22:47.432858+00:00"
 }
